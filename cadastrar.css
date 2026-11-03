@@ -1,0 +1,111 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f9;
+    color: #252538;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.voltar {
+    display: inline-block;
+    color: #6c4ce3;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.painel {
+    background-color: white;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #e5e5ef;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #38384d;
+}
+
+.campo input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d8d8e5;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #252538;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input:focus {
+    border-color: #6c4ce3;
+    box-shadow: 0 0 0 3px rgba(108, 76, 227, 0.12);
+}
+
+.campo input::placeholder {
+    color: #a0a0b0;
+}
+
+#botaoCadastrar {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background-color: #6c4ce3;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#botaoCadastrar:hover {
+    background-color: #5636c5;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 28px auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .painel {
+        padding: 20px;
+    }
+}
