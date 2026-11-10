@@ -1,14 +1,9 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f0f0f5;
     color: #292929;
+    min-height: 100vh;
     padding: 40px 20px;
 }
 
@@ -18,9 +13,10 @@ body {
     padding-bottom: 18px;
     border-bottom: 3px solid #5b57e7;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .cabecalho h1 {
@@ -30,6 +26,12 @@ body {
 .link-cadastrar {
     color: #5b57e7;
     font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.link-cadastrar:hover {
+    background-color: #eee9ff;
     text-decoration: underline;
 }
 
@@ -49,6 +51,7 @@ main {
     border: 2px solid #d0d0dc;
     border-radius: 10px;
     padding: 18px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .musica h2 {
@@ -57,13 +60,15 @@ main {
 }
 
 .artista {
+    color: #5b57e7;
+    font-weight: bold;
     font-size: 17px;
     margin-bottom: 5px;
 }
 
 .detalhes {
-    font-size: 14px;
     color: #777777;
+    font-size: 14px;
     margin-bottom: 14px;
 }
 
@@ -84,24 +89,27 @@ main {
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .editar {
     color: #5b57e7;
     border-color: #5b57e7;
-}
-
-.apagar {
-    color: #d92d20;
-    border-color: #d92d20;
+    background-color: #eee9ff;
 }
 
 .editar:hover {
     background-color: #f0efff;
 }
 
-.apagar:hover {
+.apagar {
+    color: #d92d20;
+    border-color: #d92d20;
     background-color: #fff0ee;
+}
+
+.apagar:hover {
+    background-color: #ffd3d3;
 }
 
 @media (max-width: 500px) {
@@ -109,9 +117,17 @@ main {
         padding: 24px 14px;
     }
 
+    main {
+        margin: 24px auto;
+    }
+
     .cabecalho {
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .musica {
+        padding: 18px;
     }
 
     .cabecalho h1 {
